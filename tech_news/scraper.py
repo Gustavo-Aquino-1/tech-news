@@ -20,7 +20,9 @@ def fetch(url):
 
 # Requisito 2
 def scrape_updates(html_content):
-    """Seu código deve vir aqui"""
+    selector = Selector(html_content)
+    news = selector.css('h2.entry-title > a::attr(href)').getall()  # pai > fil
+    return news or []
 
 
 # Requisito 3
