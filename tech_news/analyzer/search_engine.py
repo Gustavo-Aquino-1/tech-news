@@ -1,6 +1,12 @@
+from tech_news.database import db
+import re
+
+
 # Requisito 7
 def search_by_title(title):
-    """Seu código deve vir aqui"""
+    regex = re.compile(title, re.IGNORECASE)
+    news = db.news.find({"title": {"$regex": regex}})
+    return [(x["title"], x["url"]) for x in news]
 
 
 # Requisito 8

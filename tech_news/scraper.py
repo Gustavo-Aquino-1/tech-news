@@ -3,6 +3,7 @@ from requests import ReadTimeout
 from parsel import Selector
 from time import sleep
 from tech_news.database import create_news
+
 # import scrapy
 
 
