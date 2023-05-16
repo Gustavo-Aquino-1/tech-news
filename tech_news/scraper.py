@@ -3,6 +3,7 @@ from requests import ReadTimeout
 from parsel import Selector
 from time import sleep
 from tech_news.database import create_news
+# import scrapy
 
 
 # Requisito 1
@@ -77,7 +78,7 @@ def get_tech_news(amount):
     url = "https://blog.betrybe.com"
     while count < amount:
         content = fetch(url)
-        news_url = scrape_updates(content)
+        news_url = scrape_updates(fetch(url))
         for u in news_url:
             news_details = fetch(u)
             news.append(scrape_news(news_details))
@@ -88,3 +89,6 @@ def get_tech_news(amount):
 
     create_news(news)
     return news
+
+
+get_tech_news(15)
