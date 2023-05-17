@@ -1,5 +1,6 @@
 from tech_news.database import db
 import re
+import datetime
 
 
 # Requisito 7
@@ -10,8 +11,19 @@ def search_by_title(title):
 
 
 # Requisito 8
-def search_by_date(date):
-    """Seu código deve vir aqui"""
+def format(str):
+    return int(str[1]) if str[0] == "0" else int(str)
+
+
+def search_by_date(date: str):
+    try:
+        year, month, day = [format(x) for x in date.split("-")]
+        datetime.date(year, month, day)
+        date = "/".join(list(reversed(date.split("-"))))
+        news = db.news.find({"timestamp": date})
+        return [(x["title"], x["url"]) for x in news]
+    except Exception:
+        raise ValueError("Data inválida")
 
 
 # Requisito 9
