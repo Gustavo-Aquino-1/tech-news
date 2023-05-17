@@ -75,6 +75,7 @@ def scrape_news(html_content):
 
 # Requisito 5
 def get_tech_news(amount):
+    amount = int(amount)
     news, count = [], 0
     url = "https://blog.betrybe.com"
     while count < amount:
@@ -90,6 +91,3 @@ def get_tech_news(amount):
 
     create_news(news)
     return news
-
-
-get_tech_news(15)
