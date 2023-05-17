@@ -28,4 +28,6 @@ def search_by_date(date: str):
 
 # Requisito 9
 def search_by_category(category):
-    """Seu código deve vir aqui"""
+    regex = re.compile(category, re.IGNORECASE)
+    news = db.news.find({"category": {"$regex": regex}})
+    return [(x["title"], x["url"]) for x in news]
