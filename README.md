@@ -1,10 +1,11 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+<h1> Tech News 📰 </h1>
+
+Nesse projeto foi trabalhada a habilidade de fazer scrape (raspagem de dados) utilizando python, após ser feita a raspagem, os dados selecionados são salvos no banco de dados (mongo db), e posteriormente podem ser filtrados (utilizando pymongo) pelo título, data, categoria e etc. Quando o usuário acessa o programa e executa o arquivo principal, é disponibilizado um menu, com as funcionalidades disponíveis comentadas acima, assim facilitando bastante o uso.
+
+Veja o funcionamento abaixo!
+
+
+
+
+https://github.com/Gustavo-Aquino-1/tech-news/assets/102107048/e9b470bf-bd84-4305-820f-309a7ed5d1ab
+
